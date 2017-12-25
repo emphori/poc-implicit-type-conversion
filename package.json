@@ -1,0 +1,45 @@
+{
+  "name": "poc",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/main/index.js",
+  "scripts": {
+    "lint": "npm run lint:main && npm run lint:test",
+    "lint:main": "eslint src/main --fix",
+    "lint:test": "eslint src/test --fix",
+    "prepare": "babel src --out-dir lib",
+    "test": "tape lib/test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/implicitjs/poc.git"
+  },
+  "keywords": [
+    "implicit",
+    "type",
+    "conversion"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/implicitjs/poc/issues"
+  },
+  "homepage": "https://github.com/implicitjs/poc#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.1.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-function-parameter-decorators": "^1.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.14.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "tape": "^4.8.0"
+  },
+  "private": true
+}
