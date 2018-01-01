@@ -7,7 +7,9 @@
     "lint": "npm run lint:main && npm run lint:test",
     "lint:main": "eslint src/main --fix",
     "lint:test": "eslint src/test --fix",
-    "prepare": "babel src --out-dir lib",
+    "prepare": "npm run prepare:main && npm run prepare:test",
+    "prepare:main": "babel src/main --out-dir lib/main",
+    "prepare:test": "babel src/test --out-dir lib/test",
     "test": "tape lib/test/**/*.js"
   },
   "repository": {
